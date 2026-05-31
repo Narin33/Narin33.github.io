@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หนังที่ชอบ - Spider-Man</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome 6.4.0 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page-movie">
+
+    <!-- แถบเมนูด้านบน (Glassmorphic Navbar) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-user-astronaut"></i>
+                <span>My Space</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html"><i class="fa-solid fa-user"></i>โปรไฟล์</a>
+                </li>
+                <li class="nav-item">
+                    <a href="movie.html" class="active"><i class="fa-solid fa-mask"></i>หนังที่ชอบ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="football.html"><i class="fa-solid fa-soccer-ball"></i>ฟุตบอล</a>
+                </li>
+                <li class="nav-item">
+                    <a href="music.html"><i class="fa-solid fa-music"></i>เพลงที่ชอบ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- คอนเทนเนอร์มีแอนิเมชันเปิดตัวหน้าเว็บ (Animated Entry) -->
+    <div class="container animated-entry">
+        <!-- โครงสร้างสองฝั่ง (Movie Grid) -->
+        <div class="movie-grid">
+            
+            <!-- ฝั่งซ้าย: โปสเตอร์การ์ดแบบ CSS พิเศษ -->
+            <div class="movie-poster-fallback">
+                <!-- ลายใยแมงมุมสะท้อนแสงในตัว -->
+                <div class="spider-web-bg"></div>
+                <i class="fa-solid fa-mask main-icon"></i>
+                <div>
+                    <h3 style="color:#ffffff; margin-bottom:5px; font-size:1.6rem; letter-spacing:1px; font-family: var(--font-heading);">SPIDER-MAN</h3>
+                    <p style="color:var(--accent-movie); font-weight:800; font-size:0.95rem; letter-spacing:4px; font-family: var(--font-heading);">NO WAY HOME</p>
+                </div>
+                <div style="font-size:0.9rem; color:var(--text-secondary); border-top:1px solid rgba(255,255,255,0.1); padding-top:18px; width:100%;">
+                    <p style="color:#94a3b8;"><i class="fa-solid fa-clapperboard" style="color:var(--accent-movie); margin-right:6px;"></i> Marvel & Sony Pictures</p>
+                </div>
+            </div>
+
+            <!-- ฝั่งขวา: ข้อมูลเนื้อหาภาพยนตร์ -->
+            <div class="card card-premium-glow" style="margin-bottom:0;">
+                <div>
+                    <span class="badge"><i class="fa-solid fa-fire-flame-simple"></i> แนะนำในดวงใจ</span>
+                    <span class="badge" style="background:rgba(239, 68, 68, 0.1); color:#ef4444; border-color:rgba(239,68,68,0.2);"><i class="fa-solid fa-star"></i> IMDb 8.2/10</span>
+                    <span class="badge" style="background:rgba(255, 255, 255, 0.05); color:#f3f4f6;"><i class="fa-solid fa-mask"></i> Peter Parker</span>
+                </div>
+                
+                <h1 style="margin-top: 10px;"><span class="gradient-text">Spider-Man: No Way Home</span></h1>
+                <h3 style="color: var(--text-secondary); margin-top: -10px; margin-bottom: 24px; font-weight: 500;">สไปเดอร์แมน: โน เวย์ โฮม (2021)</h3>
+                
+                <!-- คำคมทองคำ -->
+                <div class="movie-quote">
+                    <span style="font-weight: 600; font-family: var(--font-heading); display: block; margin-bottom: 4px;">"With great power, comes great responsibility."</span>
+                    <span style="font-size: 1.05rem; font-weight: normal; color: var(--text-secondary); opacity: 0.85;">
+                        - "ด้วยพลังอันยิ่งใหญ่ มาพร้อมกับความรับผิดชอบอันใหญ่ยิ่ง"
+                    </span>
+                </div>
+
+                <h2><i class="fa-solid fa-align-left"></i> เรื่องย่อและรีวิวภาพยนตร์</h2>
+                <p style="margin-bottom: 24px; text-indent: 20px; text-align: justify;">
+                    ภาพยนตร์สุดอลังการไตรภาคเรื่องที่ 3 ของซูเปอร์ฮีโร่ไอ้แมงมุมในจักรวาลมาร์เวล (MCU) 
+                    เมื่อตัวตนที่แท้จริงของ Peter Parker ถูกเปิดเผยต่อสาธารณชน ทำให้เขาต้องขอความร่วมมือจาก Doctor Strange 
+                    เพื่อร่ายเวทมนตร์ลบความทรงจำคนทั้งโลก ทว่าความยุ่งเหยิงในระหว่างการทำพิธีส่งผลให้เกิดการปะทะของพหุจักรวาล (Multiverse) 
+                    จนสามารถดึงดูดเหล่าวายร้ายในตำนานจากทุกมิติ และนำไปสู่การร่วมศึกครั้งประวัติศาสตร์ที่เป็นการเติมเต็มจิตวิญญาณสไปเดอร์แมนทุกยุคสมัย!
+                </p>
+
+                <div class="movie-meta-box">
+                    <div class="meta-item">
+                        <span class="meta-label"><i class="fa-solid fa-video" style="color: var(--accent-movie); margin-right: 6px;"></i> ผู้กำกับ (Director)</span>
+                        <span class="meta-value" style="margin-top: 4px;">Jon Watts</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label"><i class="fa-solid fa-hourglass-half" style="color: var(--accent-movie); margin-right: 6px;"></i> ความยาว (Runtime)</span>
+                        <span class="meta-value" style="margin-top: 4px;">148 นาที</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label"><i class="fa-solid fa-users-viewfinder" style="color: var(--accent-movie); margin-right: 6px;"></i> นักแสดงนำ (Stars)</span>
+                        <span class="meta-value" style="margin-top: 4px;">Tom Holland, Zendaya, Tobey Maguire, Andrew Garfield</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label"><i class="fa-solid fa-tags" style="color: var(--accent-movie); margin-right: 6px;"></i> หมวดหมู่ (Genre)</span>
+                        <span class="meta-value" style="margin-top: 4px;">Action / Sci-Fi / Adventure</span>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 35px;"><i class="fa-solid fa-heart"></i> เหตุผลความประทับใจส่วนตัว</h2>
+                <ul style="list-style:none; display:grid; gap:18px;">
+                    <li style="display:flex; gap:12px; align-items:flex-start;">
+                        <i class="fa-solid fa-circle-check" style="color:var(--accent-movie); margin-top:5px; font-size: 1.1rem;"></i>
+                        <p><strong>เติมเต็มประวัติศาสตร์วัยเด็ก:</strong> การรวบรวมไอ้แมงมุมจากทั้ง 3 มิติ (Tobey, Andrew, Tom) มาจับมือต่อสู้ด้วยกัน ถือเป็นประวัติศาสตร์ภาพยนตร์ที่สมบูรณ์แบบและอบอุ่นใจที่สุด</p>
+                    </li>
+                    <li style="display:flex; gap:12px; align-items:flex-start;">
+                        <i class="fa-solid fa-circle-check" style="color:var(--accent-movie); margin-top:5px; font-size: 1.1rem;"></i>
+                        <p><strong>ฉากต่อสู้อันล้ำสมัย:</strong> เทคนิคตระการตา มิติกระจกวิเศษ และการผสมผสานพลังโจมตีของเหล่าวายร้ายและฮีโร่ที่ออกแบบมาอย่างยอดเยี่ยม</p>
+                    </li>
+                    <li style="display:flex; gap:12px; align-items:flex-start;">
+                        <i class="fa-solid fa-circle-check" style="color:var(--accent-movie); margin-top:5px; font-size: 1.1rem;"></i>
+                        <p><strong>บทเรียนการเสียสละ:</strong> สะท้อนปรัชญาของคำว่าความรับผิดชอบและการปล่อยวางเพื่อปกป้องคนที่ตนรักได้อย่างซาบซึ้งและลึกซึ้ง</p>
+                    </li>
+                </ul>
+
+                <div style="margin-top: 36px; text-align: center;">
+                    <a href="index.html" class="btn btn-outline" style="border-color:var(--accent-movie); color:var(--accent-movie);"><i class="fa-solid fa-arrow-left"></i>กลับสู่หน้าโปรไฟล์</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ส่วนท้ายเว็บ (Footer) -->
+    <footer>
+        <div class="container" style="margin: 0 auto; padding: 0;">
+            <p style="margin-bottom: 10px; color: #64748b;">&copy; 2026 Somchai's Space. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .spider-web-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: 
+                radial-gradient(circle, transparent 20%, #000 20%, #000 21%, transparent 21%),
+                radial-gradient(circle, transparent 40%, #000 40%, #000 41%, transparent 41%),
+                radial-gradient(circle, transparent 60%, #000 60%, #000 61%, transparent 61%);
+            opacity: 0.18;
+            background-size: 100px 100px;
+            pointer-events: none;
+        }
+    </style>
+</body>
+</html>
