@@ -1692,3 +1692,773 @@ footer p {
     }
 }
 
+/* ==========================================================================
+   14. PORTED SPECIFIC STYLES FROM PAGES
+   ========================================================================== */
+
+/* --- Ported from movie.html --- */
+.page-movie .spider-web-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:
+        radial-gradient(circle, transparent 20%, #000 20%, #000 21%, transparent 21%),
+        radial-gradient(circle, transparent 40%, #000 40%, #000 41%, transparent 41%),
+        radial-gradient(circle, transparent 60%, #000 60%, #000 61%, transparent 61%);
+    opacity: 0.18;
+    background-size: 100px 100px;
+    pointer-events: none;
+}
+
+/* --- Ported from activities.html --- */
+
+/* Hero Banner */
+.page-activities .activities-hero {
+    background: linear-gradient(135deg, #0891b2 0%, #06b6d4 45%, #34d399 100%);
+    border-radius: var(--radius-md);
+    padding: 70px 40px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 16px 48px rgba(8, 145, 178, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-activities .activities-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+    background-size: 28px 28px;
+    opacity: 0.5;
+}
+
+.page-activities .activities-hero h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.page-activities .activities-hero p {
+    color: rgba(255, 255, 255, 0.88);
+    position: relative;
+}
+
+.page-activities .activities-hero .badge-hero {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+/* Activity Category Cards */
+.page-activities .activity-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.page-activities .activity-cat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: var(--shadow-soft);
+}
+
+.page-activities .activity-cat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.page-activities .activity-cat-card .cat-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    transition: var(--transition-smooth);
+}
+
+.page-activities .activity-cat-card:hover .cat-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.page-activities .activity-cat-card h3 {
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.page-activities .activity-cat-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Colored category icons */
+.page-activities .cat-icon.cat-coding {
+    background: rgba(99, 102, 241, 0.12);
+    color: #6366f1;
+}
+
+.page-activities .cat-icon.cat-travel {
+    background: rgba(8, 145, 178, 0.12);
+    color: #0891b2;
+}
+
+.page-activities .cat-icon.cat-fitness {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+}
+
+.page-activities .cat-icon.cat-food {
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+}
+
+.page-activities .cat-icon.cat-reading {
+    background: rgba(139, 92, 246, 0.12);
+    color: #8b5cf6;
+}
+
+.page-activities .cat-icon.cat-gaming {
+    background: rgba(225, 29, 72, 0.12);
+    color: #e11d48;
+}
+
+.page-activities .activity-cat-card:hover {
+    border-color: rgba(var(--accent-activities-rgb), 0.4);
+}
+
+/* Daily Schedule Timeline */
+.page-activities .timeline {
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+}
+
+.page-activities .timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-activities), rgba(var(--accent-activities-rgb), 0.1));
+    border-radius: 1px;
+}
+
+.page-activities .timeline-item {
+    position: relative;
+    padding: 0 0 32px 30px;
+}
+
+.page-activities .timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.page-activities .timeline-dot {
+    position: absolute;
+    left: -18px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-activities);
+    border: 3px solid var(--bg-card);
+    box-shadow: 0 0 0 3px rgba(var(--accent-activities-rgb), 0.2);
+    transition: var(--transition-smooth);
+}
+
+.page-activities .timeline-item:hover .timeline-dot {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 5px rgba(var(--accent-activities-rgb), 0.15);
+}
+
+.page-activities .timeline-time {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent-activities);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.page-activities .timeline-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    font-family: var(--font-heading);
+}
+
+.page-activities .timeline-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Place Cards Grid */
+.page-activities .place-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.page-activities .place-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-soft);
+}
+
+.page-activities .place-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(var(--accent-activities-rgb), 0.4);
+}
+
+.page-activities .place-thumb {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-activities .place-thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(0);
+    transition: filter 0.4s ease;
+}
+
+.page-activities .place-card:hover .place-thumb::after {
+    filter: blur(2px) brightness(0.9);
+}
+
+.page-activities .place-thumb i {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.page-activities .place-thumb.loc-park {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+}
+
+.page-activities .place-thumb.loc-cafe {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+}
+
+.page-activities .place-thumb.loc-gym {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.page-activities .place-thumb.loc-library {
+    background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+}
+
+.page-activities .place-info {
+    padding: 20px;
+}
+
+.page-activities .place-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.page-activities .place-info p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Progress Stats */
+.page-activities .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.page-activities .stat-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 28px 20px;
+    text-align: center;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-soft);
+}
+
+.page-activities .stat-box:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(var(--accent-activities-rgb), 0.35);
+}
+
+.page-activities .stat-number {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.page-activities .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Hobby Tags */
+.page-activities .hobby-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.page-activities .hobby-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: rgba(var(--accent-activities-rgb), 0.08);
+    color: var(--accent-activities);
+    border: 1px solid rgba(var(--accent-activities-rgb), 0.2);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    cursor: default;
+}
+
+.page-activities .hobby-tag:hover {
+    background: rgba(var(--accent-activities-rgb), 0.15);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 12px rgba(var(--accent-activities-rgb), 0.15);
+}
+
+/* Page Activities Responsive Layout overrides */
+@media (max-width: 992px) {
+    .page-activities .activity-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-activities .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-activities .activity-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-activities .place-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-activities .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-activities .activities-hero {
+        padding: 48px 24px;
+    }
+}
+
+/* ===== แก้ปัญหารูปภาพ Slider ให้รองรับมือถือ (Responsive) ===== */
+.page-activities .slider-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* คอมพิวเตอร์แบ่ง 2 ฝั่ง ซ้าย-ขวา */
+    gap: 24px;
+    align-items: center;
+}
+
+.page-activities .slider-window-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* ซ่อนส่วนที่ล้นออกไปนอกกรอบ */
+    border-radius: var(--radius-md, 12px);
+}
+
+.page-activities .slider-slides-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.page-activities .slide-item {
+    flex: 0 0 100%;
+    /* บังคับให้สไลด์แต่ละหน้ากว้างเต็ม 100% พอดีจอ */
+    min-width: 100%;
+    position: relative;
+}
+
+.page-activities .slide-item img {
+    width: 100%;
+    /* รูปภาพจะยืด/หดตามความกว้างของกรอบเสมอ */
+    height: 350px;
+    /* ความสูงของรูปภาพบนหน้าจอคอมพิวเตอร์ */
+    object-fit: cover;
+    /* รักษาสัดส่วนรูปไม่ให้บี้แบนหรือยืดผิดรูป */
+    display: block;
+}
+
+/* ตกแต่งเครดิตรูปภาพให้สวยงามและไม่ล้นจอ */
+.page-activities .slide-photo-credit {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+    z-index: 5;
+}
+
+/* 📱 ปรับการแสดงผลสำหรับมือถือและแท็บเล็ตโดยเฉพาะ */
+@media (max-width: 992px) {
+    .page-activities .slider-grid-container {
+        grid-template-columns: 1fr;
+        /* ปรับให้เรียงซ้อนกัน บน-ล่าง */
+        gap: 20px;
+    }
+
+    .page-activities .slide-item img {
+        height: 240px;
+        /* ลดความสูงของรูปภาพให้พอดีกับหน้าจอมือถือ */
+    }
+}
+
+/* Scoped Indicator Dots for Activities */
+.page-activities .single-indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.page-activities .single-indicator-dot.active-dot {
+    background: #ffffff;
+    width: 22px;
+    border-radius: 4px;
+}
+
+
+/* --- Ported from football.html --- */
+
+/* ===== สไตล์สำหรับปุ่มลูกศรควบคุมและจุดนำทาง (Arrows & Dots Indicator) ===== */
+.page-football .slider-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid var(--border-light, #e2e8f0);
+    color: var(--text-primary, #1e293b);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.page-football .slider-nav-arrow:hover {
+    background: #ffffff;
+    color: var(--accent-football, #b45309);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.page-football .arrow-left {
+    left: 10px;
+}
+
+.page-football .arrow-right {
+    right: 10px;
+}
+
+.page-football .slider-dots-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.page-football .single-indicator-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-football .single-indicator-dot.active-dot {
+    background: var(--accent-football, #b45309);
+    transform: scale(1.2);
+}
+
+/* ===== สไตล์ดั้งเดิมสำหรับ Slider ชุดแกลเลอรีข่าวเด่น ===== */
+.page-football .multi-slider-window {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.page-football .multi-slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+.page-football .multi-slide-item {
+    flex: 0 0 33.3333%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.page-football .slide-card-inner {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-football .slide-card-inner:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    border-color: rgba(180, 83, 9, 0.3);
+}
+
+.page-football .slide-card-inner img {
+    width: 100%;
+    aspect-ratio: 15 / 16;
+    object-fit: cover;
+    display: block;
+}
+
+.page-football .multi-slide-caption {
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-primary);
+    background: #ffffff;
+    border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 992px) {
+    .page-football .multi-slide-item {
+        flex: 0 0 50%;
+    }
+
+    .page-football .slide-card-inner img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-football .multi-slide-item {
+        flex: 0 0 100%;
+    }
+
+    .page-football .slide-card-inner img {
+        height: 240px;
+    }
+}
+
+/* ===== สไตล์สำหรับ Slider ชุดทำเนียบถ้วยรางวัล ===== */
+.page-football .trophy-slider-window {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+.page-football .trophy-slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+.page-football .trophy-slide-item {
+    flex: 0 0 33.3333%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.page-football .trophy-card-inside {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: var(--transition-smooth);
+    height: 100%;
+}
+
+.page-football .trophy-card-inside:hover {
+    transform: translateY(-5px);
+    border-color: rgba(180, 83, 9, 0.3);
+    box-shadow: 0 12px 24px rgba(180, 83, 9, 0.1);
+}
+
+.page-football .trophy-img-box {
+    width: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page-football .trophy-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+    transition: transform 0.3s ease;
+}
+
+.page-football .trophy-card-inside:hover .trophy-img-box img {
+    transform: scale(1.08);
+}
+
+.page-football .trophy-fallback {
+    display: none;
+    font-size: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.page-football .trophy-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.page-football .trophy-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    line-height: 1.1;
+}
+
+.page-football .trophy-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+@media (max-width: 992px) {
+    .page-football .trophy-slide-item {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-football .trophy-slide-item {
+        flex: 0 0 100%;
+    }
+
+    .page-football .trophy-img-box {
+        height: 110px;
+    }
+}
+
+
+/* ==========================================================================
+   15. ADDITIONAL MOBILE RESPONSIVENESS IMPROVEMENTS
+   ========================================================================== */
+
+/* ลดขนาด Padding ของ Card บนอุปกรณ์หน้าจอเล็ก เพื่อไม่ให้เปลืองพื้นที่ด้านข้าง */
+@media (max-width: 576px) {
+    .card {
+        padding: 24px 16px !important;
+        border-radius: var(--radius-sm) !important;
+    }
+}
+
+/* ปรับปรุงขนาดและพฤติกรรมของโปสเตอร์หน้าหนัง */
+@media (max-width: 992px) {
+    .page-movie .movie-poster-img-wrap {
+        width: 100% !important; /* ป้องกันภาพโปสเตอร์ล้น */
+        max-width: 350px;
+        margin: 0 auto !important;
+    }
+}
+
+/* ปรับปรุงขนาดหัวข้อ h1 และ h2 สำหรับจอขนาดเล็กมาก */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.85rem !important;
+        letter-spacing: -0.8px !important;
+    }
+    h2 {
+        font-size: 1.35rem !important;
+    }
+    .profile-hero h1 {
+        font-size: 2rem !important;
+    }
+    .logo {
+        font-size: 20px !important;
+    }
+}
+
+/* ปรับปรุงสัมผัสเมนูนำทางในมือถือ */
+@media (max-width: 768px) {
+    .nav-item a {
+        padding: 10px 14px !important;
+        font-size: 13.5px !important;
+    }
+}
+
+
