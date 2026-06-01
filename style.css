@@ -1691,3 +1691,63 @@ footer p {
         gap: 28px;
     }
 }
+
+/* ===== แก้ปัญหารูปภาพ Slider ให้รองรับมือถือ (Responsive) ===== */
+        .slider-grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* คอมพิวเตอร์แบ่ง 2 ฝั่ง ซ้าย-ขวา */
+            gap: 24px;
+            align-items: center;
+        }
+
+        .slider-window-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden; /* ซ่อนส่วนที่ล้นออกไปนอกกรอบ */
+            border-radius: var(--radius-md, 12px);
+        }
+
+        .slider-slides-track {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide-item {
+            flex: 0 0 100%; /* บังคับให้สไลด์แต่ละหน้ากว้างเต็ม 100% พอดีจอ */
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide-item img {
+            width: 100%; /* รูปภาพจะยืด/หดตามความกว้างของกรอบเสมอ */
+            height: 350px; /* ความสูงของรูปภาพบนหน้าจอคอมพิวเตอร์ */
+            object-fit: cover; /* รักษาสัดส่วนรูปไม่ให้บี้แบนหรือยืดผิดรูป */
+            display: block;
+        }
+
+        /* ตกแต่งเครดิตรูปภาพให้สวยงามและไม่ล้นจอ */
+        .slide-photo-credit {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            border-radius: 6px;
+            backdrop-filter: blur(4px);
+            z-index: 5;
+        }
+
+        /* 📱 ปรับการแสดงผลสำหรับมือถือและแท็บเล็ตโดยเฉพาะ */
+        @media (max-width: 992px) {
+            .slider-grid-container {
+                grid-template-columns: 1fr; /* ปรับให้เรียงซ้อนกัน บน-ล่าง */
+                gap: 20px;
+            }
+            
+            .slide-item img {
+                height: 240px; /* ลดความสูงของรูปภาพให้พอดีกับหน้าจอมือถือ */
+            }
+        }
