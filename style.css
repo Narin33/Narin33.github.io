@@ -1,70 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 /* ==========================================================================
-   DESIGN SYSTEM & CUSTOM PROPERTIES
+   1. DESIGN SYSTEM & CUSTOM PROPERTIES (LIGHT MODE)
    ========================================================================== */
 :root {
     /* Font Families */
     --font-heading: 'Outfit', 'Sarabun', sans-serif;
     --font-body: 'Sarabun', 'Outfit', sans-serif;
 
-    /* Theme Colors (Main Slate Theme) */
-    --bg-global: #0b0f19;
-    --bg-dark: #050811;
-    --bg-card: rgba(17, 24, 39, 0.45);
-    --bg-card-rgb: 17, 24, 39;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --border-light: rgba(255, 255, 255, 0.06);
-    --navbar-bg: rgba(5, 8, 17, 0.75);
+    /* Theme Colors (Light Mode — Airy & Fresh) */
+    --bg-global: #f0f4ff;
+    --bg-dark: #e2e8f8;
+    --bg-card: rgba(255, 255, 255, 0.82);
+    --bg-card-rgb: 255, 255, 255;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border-light: rgba(100, 116, 139, 0.14);
+    --navbar-bg: rgba(255, 255, 255, 0.82);
 
-    /* Page Accents (Curated Premium Colors) */
-    /* Profile (Indigo) */
-    --accent-profile: #818cf8;
-    --accent-profile-rgb: 129, 140, 248;
+    /* Profile Accents (Royal Indigo) */
+    --accent-profile: #6366f1;
+    --accent-profile-rgb: 99, 102, 241;
     --gradient-profile: linear-gradient(135deg, #6366f1 0%, #a78bfa 100%);
-    
-    /* Movie - Spider-Man (Crimson Red) */
-    --accent-movie: #f87171;
-    --accent-movie-rgb: 248, 113, 113;
-    --gradient-movie: linear-gradient(135deg, #ef4444 0%, #fda4af 100%);
-    
-    /* Football - Real Madrid (Royal Gold & Deep Navy) */
-    --accent-football: #fbbf24; /* Radiant Gold */
-    --accent-football-rgb: 251, 191, 36;
-    --gradient-football: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #f59e0b 100%);
-    
-    /* Music (Vibrant Emerald) */
-    --accent-music: #34d399;
-    --accent-music-rgb: 52, 211, 153;
-    --gradient-music: linear-gradient(135deg, #10b981 0%, #6ee7b7 100%);
+
+    /* Movie Accents - Spider-Man (Crimson Red) */
+    --accent-movie: #e11d48;
+    --accent-movie-rgb: 225, 29, 72;
+    --gradient-movie: linear-gradient(135deg, #e11d48 0%, #fb7185 100%);
+
+    /* Football Accents - Real Madrid (Royal Gold & Deep Navy) */
+    --accent-football: #d97706;
+    --accent-football-rgb: 217, 119, 6;
+    --gradient-football: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #d97706 100%);
+
+    /* Activities & Music Accents (Sky Blue / Teal) */
+    --accent-activities: #0891b2;
+    --accent-activities-rgb: 8, 145, 178;
+    --gradient-activities: linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #6ee7b7 100%);
 
     /* Shadows & Glows */
-    --shadow-soft: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    --shadow-medium: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
-    --shadow-glow-profile: 0 0 30px rgba(99, 102, 241, 0.25);
-    --shadow-glow-movie: 0 0 35px rgba(239, 68, 68, 0.35);
-    --shadow-glow-football: 0 0 30px rgba(251, 191, 36, 0.2);
-    --shadow-glow-music: 0 0 35px rgba(16, 185, 129, 0.3);
-    
+    --shadow-soft: 0 4px 24px 0 rgba(99, 102, 241, 0.08);
+    --shadow-medium: 0 16px 48px -8px rgba(30, 41, 59, 0.18);
+    --shadow-glow-profile: 0 0 28px rgba(99, 102, 241, 0.18);
+    --shadow-glow-movie: 0 0 28px rgba(225, 29, 72, 0.18);
+    --shadow-glow-football: 0 0 28px rgba(217, 119, 6, 0.18);
+    --shadow-glow-activities: 0 0 28px rgba(8, 145, 178, 0.18);
+
+    /* Borders & Transitions */
     --radius-sm: 10px;
     --radius-md: 20px;
     --radius-lg: 30px;
-    
     --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Page Specific Accent Overrides - EVERYTHING DARK/GLASS FOR EXTREME PREMIUM FEEL */
+/* ==========================================================================
+   2. PAGE SPECIFIC ACCENT OVERRIDES
+   ========================================================================== */
 body.page-profile {
     --accent-color: var(--accent-profile);
     --accent-color-rgb: var(--accent-profile-rgb);
     --accent-gradient: var(--gradient-profile);
     --accent-glow: var(--shadow-glow-profile);
-    --bg-global: #090d16;
-    --bg-card: rgba(15, 23, 42, 0.5);
-    --bg-card-rgb: 15, 23, 42;
-    --border-light: rgba(255, 255, 255, 0.05);
+    --bg-global: #eef0ff;
+    --bg-card: rgba(255, 255, 255, 0.88);
+    --bg-card-rgb: 255, 255, 255;
+    --border-light: rgba(99, 102, 241, 0.1);
 }
 
 body.page-movie {
@@ -72,10 +73,10 @@ body.page-movie {
     --accent-color-rgb: var(--accent-movie-rgb);
     --accent-gradient: var(--gradient-movie);
     --accent-glow: var(--shadow-glow-movie);
-    --bg-global: #06080f;
-    --bg-card: rgba(21, 25, 41, 0.55);
-    --bg-card-rgb: 21, 25, 41;
-    --border-light: rgba(255, 255, 255, 0.05);
+    --bg-global: #fff1f2;
+    --bg-card: rgba(255, 255, 255, 0.88);
+    --bg-card-rgb: 255, 255, 255;
+    --border-light: rgba(225, 29, 72, 0.1);
 }
 
 body.page-football {
@@ -83,25 +84,25 @@ body.page-football {
     --accent-color-rgb: var(--accent-football-rgb);
     --accent-gradient: var(--gradient-football);
     --accent-glow: var(--shadow-glow-football);
-    --bg-global: #070c18;
-    --bg-card: rgba(13, 22, 44, 0.5);
-    --bg-card-rgb: 13, 22, 44;
-    --border-light: rgba(255, 255, 255, 0.05);
+    --bg-global: #fffbeb;
+    --bg-card: rgba(255, 255, 255, 0.88);
+    --bg-card-rgb: 255, 255, 255;
+    --border-light: rgba(217, 119, 6, 0.1);
 }
 
-body.page-music {
-    --accent-color: var(--accent-music);
-    --accent-color-rgb: var(--accent-music-rgb);
-    --accent-gradient: var(--gradient-music);
-    --accent-glow: var(--shadow-glow-music);
-    --bg-global: #04080e;
-    --bg-card: rgba(15, 23, 35, 0.55);
-    --bg-card-rgb: 15, 23, 35;
-    --border-light: rgba(255, 255, 255, 0.05);
+body.page-activities {
+    --accent-color: var(--accent-activities);
+    --accent-color-rgb: var(--accent-activities-rgb);
+    --accent-gradient: var(--gradient-activities);
+    --accent-glow: var(--shadow-glow-activities);
+    --bg-global: #ecfeff;
+    --bg-card: rgba(255, 255, 255, 0.88);
+    --bg-card-rgb: 255, 255, 255;
+    --border-light: rgba(8, 145, 178, 0.1);
 }
 
 /* ==========================================================================
-   GLOBAL RESET & STYLES
+   3. GLOBAL RESET, SCROLLBAR & BASE STYLES
    ========================================================================== */
 * {
     margin: 0;
@@ -118,25 +119,31 @@ html {
 body {
     font-family: var(--font-body);
     background-color: var(--bg-global);
+    background-image:
+        radial-gradient(ellipse at 20% 10%, rgba(var(--accent-color-rgb, 99, 102, 241), 0.07) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(var(--accent-color-rgb, 99, 102, 241), 0.05) 0%, transparent 50%);
     color: var(--text-primary);
     line-height: 1.7;
     overflow-x: hidden;
     transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-/* Custom Scrollbar */
+/* Custom Webkit Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-global);
 }
+
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(100, 116, 139, 0.25);
     border-radius: 5px;
     border: 2px solid var(--bg-global);
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-color);
 }
@@ -158,7 +165,7 @@ body {
 }
 
 /* ==========================================================================
-   HEADER & NAVIGATION BAR (GLASSMORPHIC)
+   4. HEADER & NAVIGATION BAR (GLASSMORPHIC)
    ========================================================================== */
 .navbar {
     background-color: var(--navbar-bg);
@@ -181,7 +188,7 @@ body {
 }
 
 .logo {
-    color: #fff;
+    color: var(--text-primary);
     font-family: var(--font-heading);
     font-size: 24px;
     font-weight: 800;
@@ -198,7 +205,7 @@ body {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 10px rgba(var(--accent-color-rgb), 0.5));
+    filter: drop-shadow(0 0 10px rgba(var(--accent-color-rgb), 0.35));
     transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -213,7 +220,7 @@ body {
 }
 
 .nav-item a {
-    color: #94a3b8;
+    color: var(--text-secondary);
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
@@ -231,10 +238,9 @@ body {
     transition: var(--transition-smooth);
 }
 
-/* Active and Hover Effects */
 .nav-item a:hover {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    background-color: rgba(var(--accent-color-rgb), 0.07);
 }
 
 .nav-item a:hover i {
@@ -243,9 +249,9 @@ body {
 }
 
 .nav-item a.active {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+    background: rgba(var(--accent-color-rgb), 0.10);
+    box-shadow: inset 0 0 0 1px rgba(var(--accent-color-rgb), 0.2);
 }
 
 .nav-item a::after {
@@ -267,7 +273,7 @@ body {
 }
 
 /* ==========================================================================
-   LAYOUT CONTAINERS & ULTRA GLASS CARDS
+   5. LAYOUT CONTAINERS & ULTRA GLASS CARDS
    ========================================================================== */
 .container {
     max-width: 1200px;
@@ -275,7 +281,6 @@ body {
     padding: 0 24px;
 }
 
-/* Ultra Glass Card (Specular Highlight & Deep Shadow) */
 .card {
     background: var(--bg-card);
     backdrop-filter: blur(24px) saturate(140%);
@@ -312,17 +317,18 @@ body {
     opacity: 1;
 }
 
-/* Premium Glow Overlay */
+/* Specular Highlight Overlay */
 .card-premium-glow {
     position: relative;
 }
+
 .card-premium-glow::after {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: var(--radius-md);
     padding: 1px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(var(--accent-color-rgb), 0.4) 50%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(var(--accent-color-rgb), 0.4) 50%, rgba(255, 255, 255, 0) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -330,13 +336,14 @@ body {
     opacity: 0.5;
     transition: var(--transition-smooth);
 }
+
 .card-premium-glow:hover::after {
     opacity: 1;
-    background: linear-gradient(135deg, rgba(var(--accent-color-rgb), 0.7) 0%, rgba(255,255,255,0.25) 50%, rgba(var(--accent-color-rgb), 0.9) 100%);
+    background: linear-gradient(135deg, rgba(var(--accent-color-rgb), 0.7) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(var(--accent-color-rgb), 0.9) 100%);
 }
 
 /* ==========================================================================
-   TYPOGRAPHY
+   6. TYPOGRAPHY & HEADINGS
    ========================================================================== */
 h1 {
     font-family: var(--font-heading);
@@ -395,10 +402,8 @@ p {
 }
 
 /* ==========================================================================
-   COMPONENTS
+   7. GENERIC COMPONENTS (BADGES, BUTTONS, GRIDS)
    ========================================================================== */
-
-/* Badges */
 .badge {
     background: rgba(var(--accent-color-rgb), 0.08);
     color: var(--accent-color);
@@ -414,7 +419,7 @@ p {
     font-family: var(--font-heading);
     letter-spacing: 0.5px;
     transition: var(--transition-smooth);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .badge:hover {
@@ -423,7 +428,6 @@ p {
     box-shadow: var(--accent-glow);
 }
 
-/* Premium Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -450,7 +454,7 @@ p {
     left: -50%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
     transform: skewX(-20deg);
     transition: 0.75s ease;
 }
@@ -477,7 +481,6 @@ p {
     box-shadow: 0 6px 20px rgba(var(--accent-color-rgb), 0.15);
 }
 
-/* Grid Layouts */
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -491,10 +494,8 @@ p {
 }
 
 /* ==========================================================================
-   PAGE-SPECIFIC STYLES
+   8. PAGE-SPECIFIC STYLES — PROFILE PAGE (index.html)
    ========================================================================== */
-
-/* --- Profile Page (index.html) --- */
 .profile-hero {
     display: flex;
     flex-direction: column;
@@ -520,7 +521,7 @@ p {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: var(--bg-global);
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -541,7 +542,7 @@ p {
 }
 
 .info-item {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(var(--accent-profile-rgb), 0.03);
     padding: 18px 22px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--border-light);
@@ -553,9 +554,9 @@ p {
 
 .info-item:hover {
     transform: translateY(-3px) scale(1.02);
-    background: rgba(var(--accent-profile-rgb), 0.05);
-    border-color: rgba(var(--accent-profile-rgb), 0.25);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background: rgba(var(--accent-profile-rgb), 0.07);
+    border-color: rgba(var(--accent-profile-rgb), 0.3);
+    box-shadow: 0 4px 20px rgba(var(--accent-profile-rgb), 0.12);
 }
 
 .info-item i {
@@ -582,9 +583,20 @@ p {
     transition: var(--transition-smooth);
 }
 
-.interest-card.card-movie i { color: var(--accent-movie); filter: drop-shadow(0 0 10px rgba(var(--accent-movie-rgb), 0.3)); }
-.interest-card.card-football i { color: var(--accent-football); filter: drop-shadow(0 0 10px rgba(var(--accent-football-rgb), 0.3)); }
-.interest-card.card-music i { color: var(--accent-music); filter: drop-shadow(0 0 10px rgba(var(--accent-music-rgb), 0.3)); }
+.interest-card.card-movie i {
+    color: var(--accent-movie);
+    filter: drop-shadow(0 0 10px rgba(var(--accent-movie-rgb), 0.3));
+}
+
+.interest-card.card-football i {
+    color: var(--accent-football);
+    filter: drop-shadow(0 0 10px rgba(var(--accent-football-rgb), 0.3));
+}
+
+.interest-card.card-activities i {
+    color: var(--accent-activities);
+    filter: drop-shadow(0 0 10px rgba(var(--accent-activities-rgb), 0.3));
+}
 
 .interest-card:hover {
     transform: translateY(-10px);
@@ -595,30 +607,44 @@ p {
     transform: scale(1.2) translateY(-4px) rotate(5deg);
 }
 
-.interest-card.card-movie:hover { border-color: rgba(var(--accent-movie-rgb), 0.5); box-shadow: 0 12px 30px rgba(var(--accent-movie-rgb), 0.2); }
-.interest-card.card-football:hover { border-color: rgba(var(--accent-football-rgb), 0.5); box-shadow: 0 12px 30px rgba(var(--accent-football-rgb), 0.2); }
-.interest-card.card-music:hover { border-color: rgba(var(--accent-music-rgb), 0.5); box-shadow: 0 12px 30px rgba(var(--accent-music-rgb), 0.2); }
+.interest-card.card-movie:hover {
+    border-color: rgba(var(--accent-movie-rgb), 0.5);
+    box-shadow: 0 12px 30px rgba(var(--accent-movie-rgb), 0.15);
+}
 
-/* Skills progress indicators */
+.interest-card.card-football:hover {
+    border-color: rgba(var(--accent-football-rgb), 0.5);
+    box-shadow: 0 12px 30px rgba(var(--accent-football-rgb), 0.15);
+}
+
+.interest-card.card-activities:hover {
+    border-color: rgba(var(--accent-activities-rgb), 0.5);
+    box-shadow: 0 12px 30px rgba(var(--accent-activities-rgb), 0.15);
+}
+
 .skills-container {
     margin-top: 25px;
 }
+
 .skill-bar-wrapper {
     margin-bottom: 20px;
 }
+
 .skill-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
     font-weight: 600;
 }
+
 .skill-bar {
     height: 10px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(var(--accent-color-rgb), 0.10);
     border-radius: 5px;
     overflow: hidden;
     position: relative;
 }
+
 .skill-progress {
     height: 100%;
     background: var(--accent-gradient);
@@ -627,27 +653,23 @@ p {
     position: relative;
     transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .skill-progress::after {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
     animation: shimmer 2.5s infinite;
 }
+
 @keyframes shimmer {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
 
-/* --- Movie Page (movie.html) --- */
+/* ==========================================================================
+   9. PAGE-SPECIFIC STYLES — MOVIE PAGE (movie.html)
+   ========================================================================== */
 .movie-grid {
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -655,12 +677,74 @@ p {
     align-items: start;
 }
 
+.movie-poster-img-wrap {
+    width: 110%;
+    aspect-ratio: 12 / 12;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-glow-movie), var(--shadow-medium);
+    border: 1px solid rgba(var(--accent-movie-rgb), 0.25);
+    flex-shrink: 0;
+}
+
+.movie-poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.movie-poster-img-wrap:hover .movie-poster-img {
+    transform: scale(1.04);
+}
+
+.movie-poster-label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 40px 20px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.poster-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.poster-sub {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-movie);
+    letter-spacing: 5px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.poster-sub1 {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
 .movie-poster-fallback {
     width: 100%;
     aspect-ratio: 2/3;
     border-radius: var(--radius-md);
-    background: linear-gradient(135deg, #0f1322 0%, #03050a 100%);
-    border: 1px solid rgba(var(--accent-movie-rgb), 0.25);
+    background: linear-gradient(145deg, #1e0a0a 0%, #3b0808 40%, #7f1d1d 100%);
+    border: 1px solid rgba(var(--accent-movie-rgb), 0.35);
     box-shadow: var(--shadow-glow-movie);
     display: flex;
     flex-direction: column;
@@ -703,7 +787,6 @@ p {
     font-size: 1.3rem;
     color: var(--accent-movie);
     border-left: 4px solid var(--accent-movie);
-    padding-left: 20px;
     margin: 24px 0;
     line-height: 1.6;
     background: rgba(var(--accent-movie-rgb), 0.04);
@@ -711,7 +794,7 @@ p {
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
     border-top: 1px solid rgba(var(--accent-movie-rgb), 0.05);
     border-bottom: 1px solid rgba(var(--accent-movie-rgb), 0.05);
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .movie-meta-box {
@@ -744,17 +827,20 @@ p {
     color: var(--text-primary);
 }
 
-/* --- Football Page (football.html) --- */
+/* ==========================================================================
+   10. PAGE-SPECIFIC STYLES — FOOTBALL PAGE (football.html)
+   ========================================================================== */
 .football-hero {
-    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(8, 12, 20, 0.95)), 
-                radial-gradient(circle at top right, rgba(var(--accent-football-rgb), 0.22), transparent 70%);
-    border: 1px solid rgba(var(--accent-football-rgb), 0.35);
+    background:
+        linear-gradient(160deg, rgba(29, 78, 216, 0.72) 0%, rgba(15, 40, 100, 0.55) 40%, rgba(120, 60, 0, 0.60) 100%),
+        url('img/ND_ESTADIO-BERNABEU_01.webp') center center / cover no-repeat;
+    border: none;
     border-radius: var(--radius-md);
-    padding: 70px 40px;
+    padding: 90px 40px;
     color: #ffffff;
     text-align: center;
     margin-bottom: 40px;
-    box-shadow: var(--shadow-glow-football);
+    box-shadow: 0 16px 48px rgba(29, 78, 216, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -763,7 +849,7 @@ p {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 0);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 0);
     background-size: 24px 24px;
     opacity: 0.4;
 }
@@ -786,9 +872,110 @@ p {
     border-radius: 30px;
     border: 1px solid rgba(251, 191, 36, 0.2);
     letter-spacing: 0.3px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.stadium-card {
+    padding: 30px !important;
+    margin-top: 40px;
+}
+
+.stadium-grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.stadium-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-light);
+}
+
+.stadium-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.stadium-image-wrapper:hover .stadium-image {
+    transform: scale(1.04);
+}
+
+.stadium-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stadium-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.stadium-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.stadium-meta-box {
+    background: rgba(var(--accent-football-rgb), 0.03);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: var(--transition-smooth);
+}
+
+.stadium-meta-box:hover {
+    background: rgba(var(--accent-football-rgb), 0.08);
+    border-color: rgba(var(--accent-football-rgb), 0.25);
+    transform: translateY(-2px);
+}
+
+.stadium-meta-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.stadium-meta-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stadium-image-credit {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: right;
+    margin-top: 8px;
+    padding-right: 4px;
+    letter-spacing: 0.5px;
+    transition: var(--transition-smooth);
+}
+
+.stadium-image-credit:hover {
+    color: var(--text-secondary);
+}
+
+/* Trophy Showcase Room */
 .trophy-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -815,7 +1002,7 @@ p {
 
 .trophy-icon {
     font-size: 52px;
-    color: #fbbf24; /* Radiant Gold */
+    color: #fbbf24;
     margin-bottom: 12px;
     filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.4));
     transition: var(--transition-smooth);
@@ -841,7 +1028,50 @@ p {
     letter-spacing: -0.2px;
 }
 
-/* --- Music Page (music.html) --- */
+/* Trophy Showcase Banner Component */
+.trophy-banner-container {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.trophy-banner-wrapper {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-light);
+}
+
+.trophy-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.trophy-banner-wrapper:hover .trophy-banner-img {
+    transform: scale(1.025);
+}
+
+.trophy-banner-credit {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: right;
+    margin-top: 8px;
+    padding-right: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   11. PAGE-SPECIFIC STYLES — MUSIC & ACTIVITIES PAGE (music.html)
+   ========================================================================== */
 .music-layout {
     display: grid;
     grid-template-columns: 420px 1fr;
@@ -849,7 +1079,6 @@ p {
     align-items: start;
 }
 
-/* Hyper-Premium Music Player Card */
 .player-deck {
     background: radial-gradient(circle at 10% 10%, rgba(var(--accent-music-rgb), 0.15), transparent 50%), var(--bg-card);
     border-color: rgba(var(--accent-music-rgb), 0.25);
@@ -864,16 +1093,15 @@ p {
     position: relative;
 }
 
-/* Mechanical Audio arm (Tonearm) simulation! */
+/* Mechanical Audio Tonearm */
 .tonearm {
     position: absolute;
     width: 60px;
     height: 120px;
-    top: -20px;
-    right: 50px;
+    top: -20px; right: 50px;
     background: transparent;
     transform-origin: 20px 20px;
-    transform: rotate(0deg); /* JS controlled */
+    transform: rotate(0deg);
     transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 10;
     pointer-events: none;
@@ -885,10 +1113,9 @@ p {
     border-radius: 50%;
     background: radial-gradient(circle, #64748b 0%, #334155 60%, #1e293b 100%);
     border: 3px solid #475569;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
 }
 
 .tonearm-stick {
@@ -896,12 +1123,11 @@ p {
     height: 90px;
     background: linear-gradient(90deg, #94a3b8, #cbd5e1, #64748b);
     position: absolute;
-    top: 24px;
-    left: 15px;
+    top: 24px; left: 15px;
     transform-origin: top center;
     transform: rotate(-15deg);
     border-radius: 3px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .tonearm-head {
@@ -911,30 +1137,25 @@ p {
     border: 1px solid #475569;
     border-radius: 2px;
     position: absolute;
-    bottom: -15px;
-    left: 4px;
+    bottom: -15px; left: 4px;
     transform: rotate(15deg);
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* Tonearm active state */
 .player-deck.playing .tonearm {
     transform: rotate(26deg);
 }
 
-/* Realistic Vinyl Disk Style */
+/* Vinyl Disk Styles */
 .vinyl-disk {
     width: 230px;
     height: 230px;
     border-radius: 50%;
-    background: 
+    background:
         radial-gradient(circle, transparent 25%, #182232 25.5%, #1e293b 26%, transparent 26.5%),
         radial-gradient(circle, #222e41 10%, #0d131f 45%, #04060c 75%, #000000 100%);
-    border: 10px solid #1a2233;
-    box-shadow: 
-        0 20px 45px rgba(0, 0, 0, 0.7), 
-        inset 0 0 15px rgba(255, 255, 255, 0.12),
-        0 0 0 1px rgba(255, 255, 255, 0.05);
+    border: 1px solid #1a2233;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(255, 255, 255, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -942,11 +1163,9 @@ p {
     transition: var(--transition-smooth);
 }
 
-/* Glossy highlight layer over Vinyl */
 .vinyl-disk::after {
     content: '';
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     border-radius: 50%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.09) 100%);
     pointer-events: none;
@@ -955,8 +1174,7 @@ p {
 .vinyl-disk::before {
     content: '';
     position: absolute;
-    width: 88%;
-    height: 88%;
+    width: 88%; height: 88%;
     border-radius: 50%;
     border: 1px double rgba(255, 255, 255, 0.04);
 }
@@ -971,7 +1189,7 @@ p {
     justify-content: center;
     color: #ffffff;
     font-size: 24px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5), inset 0 0 8px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.25);
     z-index: 2;
     transition: var(--transition-smooth);
 }
@@ -980,7 +1198,12 @@ p {
     animation: spin 8s linear infinite;
 }
 
-/* Audio Spectrum Visualizer */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Audio Visualizer Waves */
 .spectrum-box {
     display: flex;
     justify-content: center;
@@ -1003,6 +1226,11 @@ p {
     transform-origin: bottom;
 }
 
+@keyframes bounce {
+    0% { transform: scaleY(1); }
+    100% { transform: scaleY(7); }
+}
+
 .player-deck.playing .spectrum-bar:nth-child(1) { animation-delay: 0.1s; animation-duration: 0.6s; }
 .player-deck.playing .spectrum-bar:nth-child(2) { animation-delay: 0.3s; animation-duration: 0.9s; }
 .player-deck.playing .spectrum-bar:nth-child(3) { animation-delay: 0.5s; animation-duration: 0.7s; }
@@ -1011,7 +1239,7 @@ p {
 .player-deck.playing .spectrum-bar:nth-child(6) { animation-delay: 0.4s; animation-duration: 0.9s; }
 .player-deck.playing .spectrum-bar:nth-child(7) { animation-delay: 0.1s; animation-duration: 0.6s; }
 
-/* Control Sliders */
+/* Audio Playlist Controls */
 .playback-progress {
     width: 100%;
     margin-bottom: 25px;
@@ -1020,7 +1248,7 @@ p {
 .slider-track {
     width: 100%;
     height: 6px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(var(--accent-color-rgb), 0.12);
     border-radius: 3px;
     position: relative;
     cursor: pointer;
@@ -1030,10 +1258,9 @@ p {
     height: 100%;
     background: var(--accent-gradient);
     border-radius: 3px;
-    width: 0%; /* JS Controlled */
+    width: 0%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
 }
 
 .time-stamps {
@@ -1045,7 +1272,6 @@ p {
     font-weight: 600;
 }
 
-/* Control Buttons */
 .player-controls {
     display: flex;
     justify-content: center;
@@ -1091,7 +1317,6 @@ p {
     color: #ffffff;
 }
 
-/* Playlist Styling */
 .playlist {
     list-style: none;
 }
@@ -1173,41 +1398,55 @@ p {
 }
 
 /* ==========================================================================
-   FOOTER
+   12. FOOTER
    ========================================================================== */
 footer {
     text-align: center;
     padding: 40px 20px;
     background-color: var(--bg-dark);
-    color: #64748b;
+    color: var(--text-muted);
     border-top: 1px solid var(--border-light);
     margin-top: 60px;
     font-size: 0.95rem;
 }
 
 footer p {
-    color: #64748b;
+    color: var(--text-muted);
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN (MEDIA QUERIES)
+   13. RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 992px) {
     .movie-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .movie-poster-fallback {
         max-width: 320px;
         margin: 0 auto 30px;
     }
-    
+
     .music-layout {
         grid-template-columns: 1fr;
     }
-    
+
     .trophy-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stadium-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .stadium-image-wrapper {
+        aspect-ratio: 16 / 9;
+    }
+
+    .stadium-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
 
@@ -1215,34 +1454,240 @@ footer p {
     h1 {
         font-size: 2.2rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
-    
+
     .nav-container {
         flex-direction: column;
         gap: 16px;
         padding: 16px;
     }
-    
+
     .nav-menu {
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
     }
-    
+
     .nav-item a {
         padding: 8px 12px;
         font-size: 14px;
     }
-    
-    .grid-2, .grid-3 {
+
+    .grid-2,
+    .grid-3 {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .info-grid {
         grid-template-columns: 1fr;
+    }
+
+    .trophy-banner-wrapper {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* ==========================================================================
+   INTERACTIVE IMAGE SLIDER WITH SIDE CONTENT STYLES
+   ========================================================================== */
+.slider-grid-container {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr; /* ให้หน้าต่างภาพสไลด์กว้างกว่ากล่องข้อความเล็กน้อย */
+    gap: 40px;
+    align-items: center;
+}
+
+/* ฐานกล่องควบคุมมุมมองภาพสไลด์ (Slider Area Wrapper) */
+.slider-window-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10; /* กำหนดสัดส่วนกรอบภาพสไลด์ให้สมดุลและสวยงาม */
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-light);
+    background: #090d16; /* ป้องกันแสงพื้นหลังแวบผ่านระหว่างช่องเลื่อนรูปภาพ */
+}
+
+/* แทร็กขบวนรถไฟเก็บภาพถ่ายทั้งหมดวางเรียงแนวราบ */
+.slider-slides-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1); /* เอฟเฟกต์เลื่อนนุ่มนวลความเร็วระดับผ่อนปรน */
+}
+
+/* ชิ้นส่วนของสไลด์แต่ละหน้า */
+.slide-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ป้ายกำกับเครดิตภาพในสไลด์แบบโปร่งใสกลมกลืน */
+.slide-photo-credit {
+    position: absolute;
+    bottom: 12px;
+    right: 14px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    font-style: italic;
+    pointer-events: none;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ปุ่มควบคุมทิศทาง (Navigation Arrows) */
+.slider-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.slider-nav-arrow:hover {
+    background: #ffffff;
+    color: var(--accent-color);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.slider-nav-arrow.arrow-left { left: 16px; }
+.slider-nav-arrow.arrow-right { right: 16px; }
+
+/* แถบแพลตฟอร์มระบุจุดไฟนำทาง (Dots Indicator Center Line) */
+.slider-dots-indicator {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.22);
+    padding: 6px 14px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* เม็ดนำทางแบบจุดเดี่ยว */
+.single-indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+/* เอฟเฟกต์ยืดหดสุดพรีเมียมเมื่อจุดถูกเลือกใช้งาน (Active Dot Effect) */
+.single-indicator-dot.active-dot {
+    background: #ffffff;
+    width: 22px; /* เพิ่มมิติตัวชี้วัดให้ยาวขึ้นแบบโมเดิร์นดีไซน์ */
+    border-radius: 4px;
+}
+
+/* ส่วนบล็อกกล่องข้อความอธิบาย */
+.slider-explanation-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slider-spec-list {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.spec-list-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(var(--accent-color-rgb), 0.02);
+    border: 1px solid var(--border-light);
+    padding: 14px 18px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-smooth);
+}
+
+.spec-list-item:hover {
+    background: rgba(var(--accent-color-rgb), 0.05);
+    border-color: rgba(var(--accent-color-rgb), 0.25);
+    transform: translateX(6px);
+}
+
+.spec-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(var(--accent-color-rgb), 0.08);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.spec-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.spec-details strong {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.spec-details span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* จัดการความยืดหยุ่นบนหน้าจอขนาดกลางและเล็ก (Responsive) */
+@media (max-width: 992px) {
+    .slider-grid-container {
+        grid-template-columns: 1fr; /* ปรับยุบแถวให้เรียงซ้อนกันเป็นแนวตั้งเมื่อเปิดบนแท็บเล็ตและมือถือ */
+        gap: 28px;
     }
 }
