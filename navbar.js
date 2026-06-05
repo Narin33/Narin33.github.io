@@ -43,7 +43,6 @@
                     <span class="uni-faculty">Faculty of Science • Information Technology</span>
                 </div>
             </div>
-            <div class="uni-semester-badge"><i class="fa-solid fa-circle"></i> ภาคเรียนที่ 2 / 2568</div>
         </div>
     </div>`;
 

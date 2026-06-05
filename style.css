@@ -1658,11 +1658,20 @@ footer p {
 /* ==========================================================================
    INTERACTIVE IMAGE SLIDER WITH SIDE CONTENT STYLES
    ========================================================================== */
-.slider-grid-container {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr; /* ให้หน้าต่างภาพสไลด์กว้างกว่ากล่องข้อความเล็กน้อย */
-    gap: 40px;
+.slider-caption-bar { /* เปลี่ยนชื่อคลาสให้ตรงกับในโค้ดของคุณ */
+    position: relative !important; /* เปลี่ยนจาก absolute เป็น relative */
+    bottom: 0;
+    background: #1e1b4b !important; /* เปลี่ยนเป็นสีทึบ (เช่น สีม่วงเข้มโทนเดียวกับมหาลัย) */
+    border-radius: 0 0 16px 16px; /* ลบมุมด้านล่างให้โค้งรับกับกรอบรูป */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 12px 20px;
+}
+
+/* ปรับให้ตัวกรอบรูปด้านบนไม่มีโค้งล่าง เพื่อให้รอยต่อสนิทกัน */
+.slider-image-container img {
+    border-radius: 16px 16px 0 0 !important;
 }
 
 /* ฐานกล่องควบคุมมุมมองภาพสไลด์ (Slider Area Wrapper) */

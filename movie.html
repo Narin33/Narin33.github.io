@@ -193,21 +193,21 @@
             <span>NARESUAN UNIVERSITY</span>
         </div>
         <div class="footer-faculty">Faculty of Science • Department of Information Technology</div>
-        <div class="footer-semester"><i class="fa-solid fa-circle"></i> Academic Year 2568 • Semester 2</div>
         <p class="footer-copy">&copy; 2026 Narin Thongnueadee — Student Portfolio.</p>
     </footer>
 
     <!-- Animation Observer Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('revealed');
+                        revealObserver.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1 });
+            }, { threshold: 0, rootMargin: '0px' });
             revealEls.forEach(el => revealObserver.observe(el));
         });
     </script>

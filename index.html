@@ -87,7 +87,7 @@
                         <div class="info-item">
                             <i class="fa-solid fa-graduation-cap"></i>
                             <div>
-                                <strong style="display:block; font-size:0.8rem; color:var(--text-muted);">การศึกษา</strong>
+                                <strong style="display:block; font-size:0.8rem; color:var(--text-muted);">คณะวิทยาศาสตร์ / สาขา </strong>
                                 <span style="font-weight:600; font-size: 0.95rem;">เทคโนโลยีสารสนเทศ</span>
                             </div>
                         </div>
@@ -260,7 +260,6 @@
             <span>NARESUAN UNIVERSITY</span>
         </div>
         <div class="footer-faculty">Faculty of Science • Department of Information Technology</div>
-        <div class="footer-semester"><i class="fa-solid fa-circle"></i> Academic Year 2568 • Semester 2</div>
         <div class="footer-social">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -321,9 +320,10 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('revealed');
+                        revealObserver.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            }, { threshold: 0, rootMargin: '0px' });
             revealEls.forEach(el => revealObserver.observe(el));
         });
     </script>
