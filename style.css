@@ -2728,4 +2728,44 @@ footer p {
     }
 }
 
+/* GPAX Progress Ring Styling */
+.progress-ring {
+    transform: rotate(-90deg);
+}
 
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+}
+
+.gpax-circle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Course item styling */
+.course-item {
+    transition: var(--transition-smooth);
+    border: 1px solid transparent;
+}
+
+.course-item:hover {
+    background: rgba(249, 115, 22, 0.08) !important;
+    border-color: rgba(249, 115, 22, 0.15);
+    transform: translateX(4px);
+}
+
+/* Activity hour box hover animations */
+.activity-hour-box {
+    transition: var(--transition-smooth);
+}
+
+.activity-hour-box:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
