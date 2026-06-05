@@ -14,15 +14,23 @@
 
 <body class="page-activities">
 
+    <!-- Floating Orbs Background -->
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+
     <!-- Navbar (โหลดจาก navbar.js อัตโนมัติ) -->
     <div id="navbar-placeholder"></div>
     <script src="navbar.js"></script>
 
     <!-- Main Container -->
-    <div class="container animated-entry">
+    <div class="container reveal-scale">
 
         <!-- Hero Section -->
-        <div class="activities-hero">
+        <div class="activities-hero reveal-scale">
             <span class="badge badge-hero">
                 <i class="fa-solid fa-sparkles"></i> My Lifestyle & Activities
             </span>
@@ -96,7 +104,7 @@
         </div>
 
         <!-- Image Slider -->
-        <div class="card card-premium-glow animated-entry">
+        <div class="card card-premium-glow reveal-scale">
             <div class="slider-grid-container">
 
                 <div class="slider-display-block">
@@ -159,7 +167,7 @@
 
         <!-- Image Slider -->
 
-        <div class="card card-premium-glow animated-entry" style="margin-top: 30px;">
+        <div class="card card-premium-glow reveal-scale" style="margin-top: 30px;">
             <div class="slider-grid-container">
 
                 <div class="slider-display-block">
@@ -206,7 +214,7 @@
 
         <!-- Image Slider -->
 
-        <div class="card card-premium-glow animated-entry" style="margin-top: 30px;">
+        <div class="card card-premium-glow reveal-scale" style="margin-top: 30px;">
             <div class="slider-grid-container">
 
                 <div class="slider-display-block">
@@ -255,14 +263,21 @@
             </div>
         </div>
 
-        <!-- Daily Routine + Favourite Places -->
-        <div class="grid-2" style="margin-top: 10px;">
-
-            <!-- Daily Routine Timeline -->
-            <div class="card card-premium-glow">
-                <h2><i class="fa-solid fa-clock-rotate-left"></i> Resume</h2>
-
+        <!-- Resume Section -->
+        <div class="card card-premium-glow reveal-scale" style="margin-top: 30px;">
+            <h2 style="justify-content: center;"><i class="fa-solid fa-file-lines"
+                    style="color: var(--accent-color);"></i> Resume</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="img/Resume.png.png" alt="Narin Thongnueadee Resume"
+                    onerror="this.src='img/Student.jpg'; this.alt='Resume not found';"
+                    style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.1);">
+                <div style="margin-top: 20px;">
+                </div>
             </div>
+        </div>
+
+        <!-- Favourite Places -->
+        <div class="grid-1" style="margin-top: 30px;">
 
             <!-- Favourite Places -->
             <div class="card card-premium-glow">
@@ -347,19 +362,22 @@
 
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container" style="margin: 0 auto; padding: 0;">
-            <p style="margin-bottom: 12px;">&#169; 2026 Narin Thongnueadee. All rights reserved.</p>
-            <div style="display: flex; gap: 20px; justify-content: center; font-size: 1.3rem;">
-                <a href="#" style="color: var(--text-muted); transition: var(--transition-smooth);"><i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href="#" style="color: var(--text-muted); transition: var(--transition-smooth);"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="#" style="color: var(--text-muted); transition: var(--transition-smooth);"><i
-                        class="fa-brands fa-github"></i></a>
-            </div>
+    <!-- Academic Footer -->
+    <footer class="footer-academic">
+        <div class="footer-uni-crest">
+            <div class="crest-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <span>NARESUAN UNIVERSITY</span>
         </div>
+        <div class="footer-faculty">Faculty of Science • Department of Information Technology</div>
+        <div class="footer-semester"><i class="fa-solid fa-circle"></i> Academic Year 2568 • Semester 2</div>
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Narin Thongnueadee — Student Portfolio. Built with <a href="#">&hearts;</a>
+        </p>
     </footer>
 
     <script>
@@ -425,6 +443,21 @@
 
             // [เปิดระบบ] Slider ชุดที่ 3: การประกวดและรางวัล (ชุดใหม่ล่าสุด)
             setupSlider("customSliderTrack3", "sliderDotsWrapper3", "sliderPrevBtn3", "sliderNextBtn3");
+        });
+    </script>
+
+    <!-- Scroll-Reveal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            revealEls.forEach(el => revealObserver.observe(el));
         });
     </script>
 

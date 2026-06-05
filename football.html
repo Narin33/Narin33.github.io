@@ -11,10 +11,18 @@
 
 <body class="page-football">
 
+    <!-- Floating Orbs Background -->
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+
     <div id="navbar-placeholder"></div>
     <script src="navbar.js"></script>
 
-    <div class="container animated-entry">
+    <div class="container reveal-scale">
         <div class="football-hero">
             <span class="badge"
                 style="background:rgba(255,255,255,0.15); color:#fdfdfd; border-color:rgba(255,255,255,0.3); backdrop-filter:blur(4px);">
@@ -34,7 +42,7 @@
             </p>
         </div>
 
-        <div class="card stadium-card animated-entry">
+        <div class="card stadium-card reveal-scale reveal-delay-2">
             <div class="stadium-grid">
 
                 <div>
@@ -46,8 +54,7 @@
                 </div>
 
                 <div class="stadium-info">
-                    <span class="badge"
-                        style="background: rgba(217, 119, 6, 0.08); color: #d97706; border-color: rgba(217, 119, 6, 0.2);">
+                    <span class="badge badge-accent">
                         <i class="fa-solid fa-landmark"></i> รังเหย้าอันเป็นตำนาน
                     </span>
                     <h2 style="border: none; margin-bottom: 10px; padding: 0;">Estadio Santiago Bernabéu</h2>
@@ -461,10 +468,21 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container" style="margin: 0 auto; padding: 0; text-align: center;">
-            <p style="margin-bottom: 10px; color: #94a3b8;">&copy; 2026 Narin Thongnueadee. All rights reserved.</p>
+    <!-- Academic Footer -->
+    <footer class="footer-academic">
+        <div class="footer-uni-crest">
+            <div class="crest-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <span>NARESUAN UNIVERSITY</span>
         </div>
+        <div class="footer-faculty">Faculty of Science • Department of Information Technology</div>
+        <div class="footer-semester"><i class="fa-solid fa-circle"></i> Academic Year 2568 • Semester 2</div>
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Narin Thongnueadee — Student Portfolio. Built with <a href="#">&hearts;</a></p>
     </footer>
 
     <script>
@@ -642,6 +660,21 @@
                 buildTrophyDots();
                 moveTrophyTrack();
             });
+        });
+    </script>
+
+    <!-- Scroll-Reveal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            revealEls.forEach(el => revealObserver.observe(el));
         });
     </script>
 

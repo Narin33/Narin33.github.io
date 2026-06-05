@@ -53,6 +53,10 @@
     --radius-lg: 30px;
     --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+.profile-hero::before, 
+.profile-hero::after {
+    display: none !important;
+}
 
 /* ==========================================================================
    2. PAGE SPECIFIC ACCENT OVERRIDES
@@ -62,10 +66,10 @@ body.page-profile {
     --accent-color-rgb: var(--accent-profile-rgb);
     --accent-gradient: var(--gradient-profile);
     --accent-glow: var(--shadow-glow-profile);
-    --bg-global: #faf8f5;
-    --bg-card: rgba(255, 255, 255, 0.88);
+    --bg-global: #f8fafc; /* Softer, clean neutral slate-50 background */
+    --bg-card: rgba(255, 255, 255, 0.85);
     --bg-card-rgb: 255, 255, 255;
-    --border-light: rgba(249, 115, 22, 0.15);
+    --border-light: rgba(249, 115, 22, 0.12); /* Slightly subtler borders */
 }
 
 body.page-movie {
@@ -73,10 +77,10 @@ body.page-movie {
     --accent-color-rgb: var(--accent-movie-rgb);
     --accent-gradient: var(--gradient-movie);
     --accent-glow: var(--shadow-glow-movie);
-    --bg-global: #fff1f2;
-    --bg-card: rgba(255, 255, 255, 0.88);
+    --bg-global: #faf6f6; /* Very subtle rose-tinted off-white background */
+    --bg-card: rgba(255, 255, 255, 0.85);
     --bg-card-rgb: 255, 255, 255;
-    --border-light: rgba(225, 29, 72, 0.15);
+    --border-light: rgba(225, 29, 72, 0.12);
 }
 
 body.page-football {
@@ -84,10 +88,10 @@ body.page-football {
     --accent-color-rgb: var(--accent-football-rgb);
     --accent-gradient: var(--gradient-football);
     --accent-glow: var(--shadow-glow-football);
-    --bg-global: #fffbeb;
-    --bg-card: rgba(255, 255, 255, 0.88);
+    --bg-global: #fafaf5; /* Subtle amber/gold-tinted off-white background */
+    --bg-card: rgba(255, 255, 255, 0.85);
     --bg-card-rgb: 255, 255, 255;
-    --border-light: rgba(217, 119, 6, 0.15);
+    --border-light: rgba(217, 119, 6, 0.12);
 }
 
 body.page-activities {
@@ -95,10 +99,10 @@ body.page-activities {
     --accent-color-rgb: var(--accent-activities-rgb);
     --accent-gradient: var(--gradient-activities);
     --accent-glow: var(--shadow-glow-activities);
-    --bg-global: #ecfeff;
-    --bg-card: rgba(255, 255, 255, 0.88);
+    --bg-global: #f5fafc; /* Subtle cyan/teal-tinted off-white background */
+    --bg-card: rgba(255, 255, 255, 0.85);
     --bg-card-rgb: 255, 255, 255;
-    --border-light: rgba(8, 145, 178, 0.15);
+    --border-light: rgba(8, 145, 178, 0.12);
 }
 
 /* ==========================================================================
@@ -2768,4 +2772,512 @@ footer p {
     transform: translateY(-2px);
     background: rgba(255, 255, 255, 0.6) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   15. UNIVERSITY HEADER BANNER
+   ========================================================================== */
+.university-header {
+    background: linear-gradient(135deg, rgba(26, 10, 46, 0.85) 0%, rgba(45, 22, 82, 0.85) 40%, rgba(74, 26, 107, 0.85) 70%, rgba(107, 47, 160, 0.85) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #f97316, #a855f7, #f97316) 1;
+}
+
+.uni-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.uni-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.uni-logo-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #f97316, #fbbf24);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #1a0a2e;
+    font-weight: 900;
+    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.4);
+}
+
+.uni-header-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.uni-header-text .uni-name {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #fbbf24;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.uni-header-text .uni-faculty {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.5px;
+}
+
+.uni-semester-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.uni-semester-badge i {
+    color: #10b981;
+    font-size: 0.55rem;
+}
+
+/* ==========================================================================
+   16. TYPEWRITER ANIMATION
+   ========================================================================== */
+.typewriter-container {
+    display: inline;
+}
+
+.typewriter-text {
+    display: inline;
+    border-right: 3px solid var(--accent-profile);
+    animation: cursorBlink 0.8s steps(1) infinite;
+    padding-right: 2px;
+}
+
+@keyframes cursorBlink {
+    0%, 100% { border-color: var(--accent-profile); }
+    50% { border-color: transparent; }
+}
+
+/* ==========================================================================
+   17. SCROLL-REVEAL ANIMATIONS
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger delays for children */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ==========================================================================
+   18. FLOATING ORBS BACKGROUND
+   ========================================================================== */
+.floating-orbs {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    /* Removing expensive filter: blur() to fix sluggishness */
+    opacity: 0.15;
+    animation: orbFloat 20s ease-in-out infinite;
+    will-change: transform;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--accent-color), transparent 70%);
+    top: 10%;
+    left: -5%;
+    animation-duration: 25s;
+}
+
+.orb-2 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #a855f7, transparent 70%);
+    top: 60%;
+    right: -8%;
+    animation-duration: 30s;
+    animation-delay: -5s;
+}
+
+.orb-3 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #3b82f6, transparent 70%);
+    bottom: 15%;
+    left: 40%;
+    animation-duration: 22s;
+    animation-delay: -10s;
+}
+
+@keyframes orbFloat {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(30px, -40px) scale(1.1);
+    }
+    50% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+    75% {
+        transform: translate(15px, 35px) scale(1.05);
+    }
+}
+
+/* ==========================================================================
+   19. ENHANCED ACADEMIC FOOTER
+   ========================================================================== */
+.footer-academic {
+    text-align: center;
+    padding: 50px 20px 30px;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #1a0a2e 100%);
+    color: rgba(255, 255, 255, 0.6);
+    border-top: none;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-academic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f97316, #a855f7, #3b82f6, #f97316);
+    background-size: 300% 100%;
+    animation: footerGradient 6s linear infinite;
+}
+
+@keyframes footerGradient {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 300% 0%; }
+}
+
+.footer-academic .footer-uni-crest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.footer-academic .footer-uni-crest .crest-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #f97316, #a855f7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+}
+
+.footer-academic .footer-uni-crest span {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+}
+
+.footer-academic .footer-faculty {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.footer-academic .footer-semester {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.footer-academic .footer-semester i {
+    color: #10b981;
+    font-size: 0.5rem;
+}
+
+.footer-academic .footer-social {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-academic .footer-social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.footer-academic .footer-social a:hover {
+    background: rgba(249, 115, 22, 0.15);
+    border-color: rgba(249, 115, 22, 0.3);
+    color: #f97316;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
+}
+
+.footer-academic .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+}
+
+.footer-academic .footer-copy a {
+    color: rgba(249, 115, 22, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-academic .footer-copy a:hover {
+    color: #f97316;
+}
+
+/* ==========================================================================
+   20. ANIMATED GRADIENT BORDER ON HOVER
+   ========================================================================== */
+@keyframes borderRotate {
+    0% { --angle: 0deg; }
+    100% { --angle: 360deg; }
+}
+
+.card-premium-glow:hover {
+    border-color: transparent;
+}
+
+/* ==========================================================================
+   21. BODY PADDING ADJUSTMENT FOR UNIVERSITY HEADER
+   ========================================================================== */
+body {
+    padding-top: 148px; /* navbar (70px offset) + uni-header (46px) + extra spacing */
+}
+
+.navbar {
+    top: 52px; /* push navbar below university header */
+}
+
+/* University header responsive */
+@media (max-width: 768px) {
+    .university-header {
+        padding: 6px 0;
+    }
+
+    .uni-header-inner {
+        padding: 0 12px;
+    }
+
+    .uni-header-text .uni-name {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+
+    .uni-header-text .uni-faculty {
+        font-size: 0.6rem;
+    }
+
+    .uni-semester-badge {
+        font-size: 0.6rem;
+        padding: 3px 10px;
+    }
+
+    .uni-logo-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+    }
+
+    body {
+        padding-top: 135px;
+    }
+
+    .navbar {
+        top: 44px;
+    }
+
+    .footer-academic {
+        padding: 35px 16px 24px;
+    }
+}
+
+/* ==========================================================================
+   22. ANIMATED COUNTER STYLES
+   ========================================================================== */
+.counter {
+    font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   23. DYNAMIC BADGES & THEME COLORS
+   ========================================================================== */
+.badge-accent {
+    background: rgba(var(--accent-color-rgb), 0.08);
+    color: var(--accent-color);
+    border-color: rgba(var(--accent-color-rgb), 0.2);
+}
+
+.badge-secondary {
+    background: rgba(100, 116, 139, 0.06);
+    color: var(--text-secondary);
+    border-color: rgba(100, 116, 139, 0.15);
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   24. RESPONSIVE GRIDS (REFACTOR)
+   ========================================================================== */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+.info-item {
+    padding: 12px 15px;
+    background: rgba(var(--accent-color-rgb), 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(var(--accent-color-rgb), 0.08);
+}
+
+.movie-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.stadium-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    background: rgba(var(--accent-color-rgb), 0.03);
+    border-radius: 6px;
+    border: 1px solid rgba(var(--accent-color-rgb), 0.05);
+}
+
+.skill-dash-item {
+    padding: 14px;
+    background: rgba(var(--accent-color-rgb), 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(var(--accent-color-rgb), 0.08);
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .info-grid,
+    .movie-meta-grid {
+        grid-template-columns: 1fr;
+    }
+    .stadium-meta-grid {
+        grid-template-columns: 1fr;
+    }
 }

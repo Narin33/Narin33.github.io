@@ -4,127 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หนังที่ชอบ - Spider-Man</title>
+    <title>หนังที่ชอบ - Spider-Man: No Way Home</title>
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome 6.4.0 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* สไตล์เสริมเฉพาะหน้าภาพยนตร์เพื่อความ Cinematic */
+        :root {
+            --accent-movie: #e11d48; /* Spider-Man Crimson */
+            --accent-magic: #6366f1; /* Multiverse Indigo Blue */
+        }
+        
+        .movie-badge {
+            background: rgba(225, 29, 72, 0.06);
+            color: var(--accent-movie);
+            border: 1px solid rgba(225, 29, 72, 0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .movie-quote-box {
+            background: linear-gradient(135deg, rgba(225, 29, 72, 0.02) 0%, rgba(99, 102, 241, 0.02) 100%);
+            border-left: 4px solid var(--accent-movie);
+            border-image: linear-gradient(to bottom, var(--accent-movie), var(--accent-magic)) 1 100%;
+            padding: 20px 25px;
+            border-radius: 0 12px 12px 0;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .movie-img-wrapper {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .movie-img-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(225, 29, 72, 0.12);
+        }
+
+        .meta-grid-item {
+            padding: 15px;
+            background: rgba(var(--accent-profile-rgb), 0.01);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    </style>
 </head>
 
-<body class="page-movie">
+<body class="page-profile">
+
+    <!-- Floating Orbs Background -->
+    <div class="floating-orbs">
+        <div class="orb orb-1" style="background: rgba(225, 29, 72, 0.06);"></div>
+        <div class="orb orb-2" style="background: rgba(99, 102, 241, 0.05);"></div>
+    </div>
 
     <!-- Navbar (โหลดจาก navbar.js อัตโนมัติ) -->
     <div id="navbar-placeholder"></div>
     <script src="navbar.js"></script>
 
-    <!-- คอนเทนเนอร์มีแอนิเมชันเปิดตัวหน้าเว็บ (Animated Entry) -->
-    <div class="container animated-entry">
-        <!-- โครงสร้างสองฝั่ง (Movie Grid) -->
-        <div class="movie-grid">
-
-            <!-- ฝั่งซ้าย: โปสเตอร์รูปภาพจริง --> <!-- ป้ายชื่อทับรูปด้านล่าง -->
-            <div style="display: flex; flex-direction: column; gap: 24px;">
-
-                <div class="movie-poster-img-wrap" style="margin: 0;">
-                    <img src="img/Spider-Man1.jpg" alt="Spider-Man: No Way Home Poster"
-                        class="movie-poster-img">
-                    <!-- ป้ายชื่อทับรูปด้านล่าง -->
-                    <div class="movie-poster-label">
-                        <span class="poster-title">SPIDER-MAN</span>
-                        <span class="poster-sub">NO WAY HOME</span>
-                        <span class="poster-sub1">ภาพโดย Takaeshi จาก Pixabay</span>
+    <!-- คอนเทนเนอร์หลัก -->
+    <div class="container animated-entry" style="margin-top: 30px;">
+        
+        <div class="grid-2 main-profile-grid" style="grid-template-columns: 1fr 1.6fr; gap: 35px; align-items: start;">
+            
+            <!-- คอลัมน์ซ้าย: รูปภาพประกอบ (Poster Stacks) -->
+            <div class="reveal reveal-left" style="display: flex; flex-direction: column; gap: 24px;">
+                
+                <div class="movie-img-wrapper">
+                    <img src="img/Spider-Man1.jpg" alt="Spider-Man Toy Custom Poster" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    <div style="padding: 10px; font-size: 0.75rem; color: var(--text-muted); background: rgba(0,0,0,0.02); text-align: center;">
+                        <i class="fa-regular fa-image"></i> ภาพโดย Takaeshi จาก Pixabay
                     </div>
                 </div>
 
-                <div class="movie-poster-img-wrap" style="margin: 0;">
-                    <img src="img/Spider-Man2.jpg" alt="Additional Activity Scene" class="movie-poster-img"
-                        style="object-fit: cover;">
-                    <!-- ป้ายชื่อทับรูปด้านล่าง -->
-                    <div class="movie-poster-label">
-                        <span class="poster-title"></span>
-                        <span class="poster-sub">ภาพโดย Pavel Danilyuk </span>
+                <div class="movie-img-wrapper">
+                    <img src="img/Spider-Man2.jpg" alt="Kid in Spider-Man Costume" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    <div style="padding: 10px; font-size: 0.75rem; color: var(--text-muted); background: rgba(0,0,0,0.02); text-align: center;">
+                        <i class="fa-regular fa-image"></i> ภาพโดย Pavel Danilyuk
                     </div>
                 </div>
 
             </div>
 
-            <!-- ฝั่งขวา: ข้อมูลเนื้อหาภาพยนตร์ -->
-            <div class="card card-premium-glow" style="margin-bottom:0;">
-                <div>
-                    <span class="badge"><i class="fa-solid fa-fire-flame-simple"></i> แนะนำในดวงใจ</span>
-                    <span class="badge"
-                        style="background:rgba(225, 29, 72, 0.08); color:#e11d48; border-color:rgba(225,29,72,0.2);"><i
-                            class="fa-solid fa-star"></i> IMDb 8.2/10</span>
-                    <span class="badge"
-                        style="background:rgba(99,102,241,0.07); color:#6366f1; border-color:rgba(99,102,241,0.15);"><i
-                            class="fa-solid fa-mask"></i> Peter Parker</span>
+            <!-- คอลัมน์ขวา: รายละเอียดเนื้อหาภาพยนตร์ -->
+            <div class="reveal reveal-right" style="display: flex; flex-direction: column; gap: 20px;">
+                
+                <!-- การ์ดข้อมูลหลักภาพยนตร์ -->
+                <div class="card card-premium-glow" style="margin: 0; padding: 40px 35px;">
+                    
+                    <!-- แท็กสถิติ/หมวดหมู่ด้านบน -->
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                        <span class="movie-badge">
+                            <i class="fa-solid fa-heart"></i> แนะนำในดวงใจ
+                        </span>
+                        <span class="badge badge-accent">
+                            <i class="fa-solid fa-star" style="color: #f59e0b;"></i> IMDb 8.2/10
+                        </span>
+                        <span class="badge badge-secondary">
+                            <i class="fa-solid fa-mask"></i> Peter Parker
+                        </span>
+                    </div>
+
+                    <!-- ชื่อเรื่องพรีเมียม -->
+                    <h1 style="margin: 0; font-size: 2.6rem; font-weight: 850; letter-spacing: -0.5px; line-height: 1.2;">
+                        Spider-Man: <span style="background: linear-gradient(135deg, var(--accent-movie), var(--accent-magic)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">No Way Home</span>
+                    </h1>
+                    <h2 style="margin-top: 5px; font-size: 1.25rem; color: var(--text-secondary); font-weight: 500; border: none; padding: 0; margin-bottom: 0;">
+                        สไปเดอร์แมน: โน เวย์ โฮม (2021)
+                    </h2>
+
+                    <!-- กล่องคำคมไอคอนิกประจำเรื่อง -->
+                    <div class="movie-quote-box">
+                        <i class="fa-solid fa-quote-left" style="position: absolute; top: 12px; left: 15px; font-size: 2.5rem; opacity: 0.05; color: var(--accent-movie);"></i>
+                        <p style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); font-style: italic; letter-spacing: 0.2px;">
+                            "With great power, comes great responsibility."
+                        </p>
+                        <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: var(--text-secondary); font-weight: 500;">
+                            *ด้วยพลังอันยิ่งใหญ่ มาพร้อมกับความรับผิดชอบอันใหญ่ยิ่ง*
+                        </p>
+                    </div>
+
+                    <!-- เรื่องย่อและบทวิจารณ์ -->
+                    <h3 style="font-size: 1.35rem; margin-top: 30px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; border: none; padding: 0;">
+                        <i class="fa-solid fa-bars-staggered" style="color: var(--accent-movie); font-size: 1.1rem;"></i> เรื่องย่อและรีวิวภาพยนตร์
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.75; text-indent: 2em; text-align: justify; margin: 0;">
+                        ภาพยนตร์สุดอลังการไตรภาคเรื่องที่ 3 ของซูเปอร์ฮีโร่ไอ้แมงมุมในจักรวาลมาร์เวล (MCU) เมื่อตัวตนที่แท้จริงของ Peter Parker ถูกเปิดเผยต่อสาธารณชน ทำให้เขาต้องขอความร่วมมือจาก Doctor Strange เพื่อร่ายเวทมนตร์ลบความทรงจำคนทั้งโลก ทว่าความยุ่งเหยิงในระหว่างการทำพิธีส่งผลให้เกิดการปะทะของพหุจักรวาล (Multiverse) จนสามารถดึงดูดเหล่าวายร้ายในตำนานจากทุกมิติ และนำไปสู่การรวมตัวครั้งประวัติศาสตร์ที่เป็นการเติมเต็มจิตวิญญาณสไปเดอร์แมนทุกยุคสมัย!
+                    </p>
+
+                    <!-- บล็อกข้อมูลภาพยนตร์ (2 คอลัมน์สมมาตร คลีนๆ) -->
+                    <div class="movie-meta-grid" style="margin-top: 35px; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 30px;">
+                        
+                        <div class="meta-grid-item" style="grid-column: span 1;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; letter-spacing: 0.5px;"><i class="fa-solid fa-video" style="color: var(--accent-movie);"></i> ผู้กำกับ (DIRECTOR)</span>
+                            <span style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem;">Jon Watts</span>
+                        </div>
+
+                        <div class="meta-grid-item">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; letter-spacing: 0.5px;"><i class="fa-solid fa-hourglass-half" style="color: #ea580c;"></i> ความยาว (RUNTIME)</span>
+                            <span style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem;">148 นาที</span>
+                        </div>
+
+                        <div class="meta-grid-item" style="grid-column: span 1;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; letter-spacing: 0.5px;"><i class="fa-solid fa-clapperboard" style="color: var(--accent-magic);"></i> นักแสดงนำ (STARS)</span>
+                            <span style="font-weight: 600; color: var(--text-primary); font-size: 0.9rem; line-height: 1.4;">Tom Holland, Zendaya, Benedict Cumberbatch</span>
+                        </div>
+
+                        <div class="meta-grid-item" style="grid-column: span 1;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; letter-spacing: 0.5px;"><i class="fa-solid fa-tags" style="color: #10b981;"></i> หมวดหมู่ (GENRE)</span>
+                            <span style="font-weight: 600; color: var(--text-primary); font-size: 0.9rem;">Action, Adventure, Sci-Fi</span>
+                        </div>
+
+                    </div>
+
+                    <!-- ปุ่มย้อนกลับหน้าแรกเท่ๆ -->
+                    <div style="margin-top: 35px; text-align: right;">
+                        <a href="index.html" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.95rem; color: var(--text-secondary); transition: color 0.2s;" onmouseover="this.style.color='var(--accent-movie)'" onmouseout="this.style.color='var(--text-secondary)'">
+                            <i class="fa-solid fa-chevron-left"></i> กลับสู่หน้าหลัก
+                        </a>
+                    </div>
+
                 </div>
 
-                <h1 style="margin-top: 10px;"><span class="gradient-text">Spider-Man: No Way Home</span></h1>
-                <h3 style="color: var(--text-secondary); margin-top: -10px; margin-bottom: 24px; font-weight: 500;">
-                    สไปเดอร์แมน: โน เวย์ โฮม (2021)</h3>
-
-                <!-- คำคมทองคำ -->
-                <div class="movie-quote">
-                    <span
-                        style="font-weight: 600; font-family: var(--font-heading); display: block; margin-bottom: 4px;">"With
-                        great power, comes great responsibility."</span>
-                    <span style="font-size: 1.05rem; font-weight: normal; color: var(--text-secondary); opacity: 0.85;">
-                        "ด้วยพลังอันยิ่งใหญ่ มาพร้อมกับความรับผิดชอบอันใหญ่ยิ่ง"
-                    </span>
-                </div>
-
-                <h2><i class="fa-solid fa-align-left"></i> เรื่องย่อและรีวิวภาพยนตร์</h2>
-                <p style="margin-bottom: 24px; text-indent: 20px; text-align: justify;">
-                    ภาพยนตร์สุดอลังการไตรภาคเรื่องที่ 3 ของซูเปอร์ฮีโร่ไอ้แมงมุมในจักรวาลมาร์เวล (MCU)
-                    เมื่อตัวตนที่แท้จริงของ Peter Parker ถูกเปิดเผยต่อสาธารณชน ทำให้เขาต้องขอความร่วมมือจาก Doctor
-                    Strange
-                    เพื่อร่ายเวทมนตร์ลบความทรงจำคนทั้งโลก
-                    ทว่าความยุ่งเหยิงในระหว่างการทำพิธีส่งผลให้เกิดการปะทะของพหุจักรวาล (Multiverse)
-                    จนสามารถดึงดูดเหล่าวายร้ายในตำนานจากทุกมิติ
-                    และนำไปสู่การร่วมศึกครั้งประวัติศาสตร์ที่เป็นการเติมเต็มจิตวิญญาณสไปเดอร์แมนทุกยุคสมัย!
-                </p>
-
-                <div class="movie-meta-box">
-                    <div class="meta-item">
-                        <span class="meta-label"><i class="fa-solid fa-video"
-                                style="color: var(--accent-movie); margin-right: 6px;"></i> ผู้กำกับ (Director)</span>
-                        <span class="meta-value" style="margin-top: 4px;">Jon Watts</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label"><i class="fa-solid fa-hourglass-half"
-                                style="color: var(--accent-movie); margin-right: 6px;"></i> ความยาว (Runtime)</span>
-                        <span class="meta-value" style="margin-top: 4px;">148 นาที</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label"><i class="fa-solid fa-users-viewfinder"
-                                style="color: var(--accent-movie); margin-right: 6px;"></i> นักแสดงนำ (Stars)</span>
-                        <span class="meta-value" style="margin-top: 4px;">Tom Holland, Zendaya, Tobey Maguire, Andrew
-                            Garfield</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label"><i class="fa-solid fa-tags"
-                                style="color: var(--accent-movie); margin-right: 6px;"></i> หมวดหมู่ (Genre)</span>
-                        <span class="meta-value" style="margin-top: 4px;">Action / Sci-Fi / Adventure</span>
-                    </div>
-                </div>
-
-                <div style="margin-top: 36px; text-align: center;">
-                    <a href="index.html" class="btn btn-outline"
-                        style="border-color:var(--accent-movie); color:var(--accent-movie);"><i
-                            class="fa-solid fa-arrow-left"></i>กลับสู่หน้าโปรไฟล์</a>
-                </div>
             </div>
 
         </div>
+
     </div>
 
-    <!-- ส่วนท้ายเว็บ (Footer) -->
-    <footer>
-        <div class="container" style="margin: 0 auto; padding: 0;">
-            <p style="margin-bottom: 10px; color: #64748b;">&copy; 2026 Narin Thongnueadee. All rights reserved.</p>
+    <!-- Academic Footer -->
+    <footer class="footer-academic" style="margin-top: 60px;">
+        <div class="footer-uni-crest">
+            <div class="crest-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <span>NARESUAN UNIVERSITY</span>
         </div>
+        <div class="footer-faculty">Faculty of Science • Department of Information Technology</div>
+        <div class="footer-semester"><i class="fa-solid fa-circle"></i> Academic Year 2568 • Semester 2</div>
+        <p class="footer-copy">&copy; 2026 Narin Thongnueadee — Student Portfolio.</p>
     </footer>
 
+    <!-- Animation Observer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealEls.forEach(el => revealObserver.observe(el));
+        });
+    </script>
 </body>
 
 </html>
