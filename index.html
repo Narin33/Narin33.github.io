@@ -23,34 +23,34 @@
         <!-- การ์ดส่วนหัวต้อนรับ & โปรไฟล์หลัก -->
         <div class="grid-2 main-profile-grid" style="margin-top: 20px;">
             
-            <!-- Left Column: Student Card -->
-            <div class="card card-premium-glow profile-hero">
-                <div class="profile-card-chip"></div>
-                <div class="avatar-wrapper">
-                    <div class="avatar-inner" style="padding: 0; overflow: hidden;">
-                        <img src="img/Student.jpg" alt="รูปภาพนักศึกษา นรินทร์"
-                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            <!-- Left Column: Student Profile & Identification -->
+            <div class="profile-left-column" style="display: flex; flex-direction: column; gap: 30px;">
+                <!-- Student Card -->
+                <div class="card card-premium-glow profile-hero">
+                    <div class="profile-card-chip"></div>
+                    <div class="avatar-wrapper">
+                        <div class="avatar-inner" style="padding: 0; overflow: hidden;">
+                            <img src="img/Student.jpg" alt="รูปภาพนักศึกษา นรินทร์"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        </div>
+                    </div>
+                    <span class="badge"><i class="fa-solid fa-briefcase"></i> IT Student</span>
+                    <span class="badge" style="background: rgba(100, 116, 139, 0.08); color: var(--text-secondary); border-color: rgba(100, 116, 139, 0.2);"><i class="fa-solid fa-graduation-cap"></i> Naresuan University</span>
+                    
+                    <div class="student-id-display" style="margin-top: 15px; font-family: monospace; font-size: 1.1rem; letter-spacing: 2px; color: var(--accent-profile); font-weight: 700;">
+                        ID: 66-0601-0042-3
+                    </div>
+                    
+                    <h1 style="margin-top: 15px;">ยินดีต้อนรับ <span class="gradient-text">welcome</span></h1>
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; margin-top: 10px;">
+                        สวัสดีครับ! ผมชื่อ นายนรินทร์ ทองเนื้อดี ยินดีต้อนรับทุกท่าน
+                    </p>
+                    <div class="barcode-simulator" style="margin-top: 25px; opacity: 0.7;">
+                        <div style="font-family: monospace; font-size: 1.5rem; letter-spacing: 4px; color: var(--text-primary); font-weight: bold;">|||| | || ||||| | ||</div>
+                        <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 4px; letter-spacing: 1.5px;">FACULTY OF SCIENCE • IT</div>
                     </div>
                 </div>
-                <span class="badge"><i class="fa-solid fa-briefcase"></i> IT Student</span>
-                <span class="badge" style="background: rgba(100, 116, 139, 0.08); color: var(--text-secondary); border-color: rgba(100, 116, 139, 0.2);"><i class="fa-solid fa-graduation-cap"></i> Naresuan University</span>
-                
-                <div class="student-id-display" style="margin-top: 15px; font-family: monospace; font-size: 1.1rem; letter-spacing: 2px; color: var(--accent-profile); font-weight: 700;">
-                    ID: 66-0601-0042-3
-                </div>
-                
-                <h1 style="margin-top: 15px;">ยินดีต้อนรับ <span class="gradient-text">welcome</span></h1>
-                <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; margin-top: 10px;">
-                    สวัสดีครับ! ผมชื่อ นายนรินทร์ ทองเนื้อดี ยินดีต้อนรับทุกท่าน
-                </p>
-                <div class="barcode-simulator" style="margin-top: 25px; opacity: 0.7;">
-                    <div style="font-family: monospace; font-size: 1.5rem; letter-spacing: 4px; color: var(--text-primary); font-weight: bold;">|||| | || ||||| | ||</div>
-                    <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 4px; letter-spacing: 1.5px;">FACULTY OF SCIENCE • IT</div>
-                </div>
-            </div>
 
-            <!-- Right Column: Academic Details & Skills -->
-            <div class="academic-details-block" style="display: flex; flex-direction: column; gap: 30px;">
                 <!-- General Info -->
                 <div class="card card-premium-glow" style="margin: 0;">
                     <h2 style="margin-top: 0;"><i class="fa-solid fa-id-card-clip"></i>ข้อมูลทั่วไป</h2>
@@ -81,6 +81,47 @@
                             <div>
                                 <strong style="display:block; font-size:0.85rem; color:var(--text-secondary);">ที่อยู่ปัจจุบัน</strong>
                                 <span style="font-weight:600;">พิษณุโลก, ประเทศไทย</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Academic & Skills Dashboard -->
+            <div class="academic-details-block" style="display: flex; flex-direction: column; gap: 30px;">
+                
+                <!-- GPAX & Academic Results -->
+                <div class="card card-premium-glow academic-transcript-card" style="margin: 0;">
+                    <h2 style="margin-top: 0;"><i class="fa-solid fa-graduation-cap"></i> ผลการเรียนเฉลี่ยสะสม (GPAX)</h2>
+                    <div style="display: grid; grid-template-columns: 100px 1fr; gap: 20px; align-items: center; margin-top: 15px;">
+                        <div class="gpax-circle-wrapper" style="position: relative; width: 90px; height: 90px;">
+                            <svg class="progress-ring" width="90" height="90">
+                                <circle class="progress-ring__background" stroke="rgba(100, 116, 139, 0.1)" stroke-width="8" fill="transparent" r="38" cx="45" cy="45"/>
+                                <circle class="progress-ring__circle" stroke="url(#gpaxGradient)" stroke-width="8" stroke-dasharray="238.76" stroke-dashoffset="10.74" stroke-linecap="round" fill="transparent" r="38" cx="45" cy="45"/>
+                                <defs>
+                                    <linearGradient id="gpaxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#f97316" />
+                                        <stop offset="100%" stop-color="#a855f7" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="gpax-value" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">3.82</div>
+                        </div>
+                        <div class="course-list-wrap">
+                            <h4 style="margin: 0 0 10px 0; color: var(--text-secondary); font-size: 0.95rem;">รายวิชาเอกเด่น (Key IT Courses)</h4>
+                            <div style="display: flex; flex-direction: column; gap: 6px;">
+                                <div class="course-item" style="display: flex; justify-content: space-between; font-size: 0.85rem; padding: 4px 8px; background: rgba(var(--accent-profile-rgb), 0.04); border-radius: 4px;">
+                                    <span>Fundamental Programming (C++)</span>
+                                    <span style="font-weight: 700; color: #10b981;">A</span>
+                                </div>
+                                <div class="course-item" style="display: flex; justify-content: space-between; font-size: 0.85rem; padding: 4px 8px; background: rgba(var(--accent-profile-rgb), 0.04); border-radius: 4px;">
+                                    <span>Database Systems & SQL</span>
+                                    <span style="font-weight: 700; color: #10b981;">A</span>
+                                </div>
+                                <div class="course-item" style="display: flex; justify-content: space-between; font-size: 0.85rem; padding: 4px 8px; background: rgba(var(--accent-profile-rgb), 0.04); border-radius: 4px;">
+                                    <span>Web Development Technology</span>
+                                    <span style="font-weight: 700; color: #10b981;">A</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -131,43 +172,6 @@
                             </div>
                         </div>
 
-                    </div>
-                </div>
-
-                <!-- GPAX & Academic Results -->
-                <div class="card card-premium-glow academic-transcript-card" style="margin: 0;">
-                    <h2 style="margin-top: 0;"><i class="fa-solid fa-graduation-cap"></i> ผลการเรียนเฉลี่ยสะสม (GPAX)</h2>
-                    <div style="display: grid; grid-template-columns: 100px 1fr; gap: 20px; align-items: center; margin-top: 15px;">
-                        <div class="gpax-circle-wrapper" style="position: relative; width: 90px; height: 90px;">
-                            <svg class="progress-ring" width="90" height="90">
-                                <circle class="progress-ring__background" stroke="rgba(100, 116, 139, 0.1)" stroke-width="8" fill="transparent" r="38" cx="45" cy="45"/>
-                                <circle class="progress-ring__circle" stroke="url(#gpaxGradient)" stroke-width="8" stroke-dasharray="238.76" stroke-dashoffset="10.74" stroke-linecap="round" fill="transparent" r="38" cx="45" cy="45"/>
-                                <defs>
-                                    <linearGradient id="gpaxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#f97316" />
-                                        <stop offset="100%" stop-color="#a855f7" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <div class="gpax-value" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">3.82</div>
-                        </div>
-                        <div class="course-list-wrap">
-                            <h4 style="margin: 0 0 10px 0; color: var(--text-secondary); font-size: 0.95rem;">รายวิชาเอกเด่น (Key IT Courses)</h4>
-                            <div style="display: flex; flex-direction: column; gap: 6px;">
-                                <div class="course-item" style="display: flex; justify-content: space-between; font-size: 0.85rem; padding: 4px 8px; background: rgba(var(--accent-profile-rgb), 0.04); border-radius: 4px;">
-                                    <span>Fundamental Programming (C++)</span>
-                                    <span style="font-weight: 700; color: #10b981;">A</span>
-                                </div>
-                                <div class="course-item" style="display: flex; justify-content: space-between; font-size: 0.85rem; padding: 4px 8px; background: rgba(var(--accent-profile-rgb), 0.04); border-radius: 4px;">
-                                    <span>Database Systems & SQL</span>
-                                    <span style="font-weight: 700; color: #10b981;">A</span>
-                                </div>
-                                <div class="course-item" style="display: flex; justify-content: space-between; font-size: 0.85rem; padding: 4px 8px; background: rgba(var(--accent-profile-rgb), 0.04); border-radius: 4px;">
-                                    <span>Web Development Technology</span>
-                                    <span style="font-weight: 700; color: #10b981;">A</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
